@@ -17,9 +17,9 @@ TPI-Procesos-y-Maquina-de-estado/
 │
 ├── docs/
 │   ├── TPI_Informe_Empresa_Ferrolux.pdf
-│   ├── FerroLux_Diccionario_de_Datos.docx
-│   ├── FerroLux_Manual_de_Usuario.docx
-│   ├── Maquina_de_estado.docx
+│   ├── FerroLux_Diccionario_de_Datos.pdf
+│   ├── FerroLux_Manual_de_Usuario.pdf
+│   ├── Maquina_de_estado.pdf
 │   ├── Consultas_IA.pdf
 │   ├── as-is.bpmn                # Diagrama BPMN del proceso AS-IS
 │   └── to-be.bpmn                # Diagrama BPMN del proceso TO-BE
@@ -81,9 +81,8 @@ Pedido derivado a producción -> Finaliza
 -Todo pedido se registra con estado "pendiente".
 -El pedido solo avanza a producción si Ventas lo autoriza explícitamente.
 
-
-## Integrantes
 ```text
+## Integrantes
 Gualla Mariano
 Furfaro Ivan
 
