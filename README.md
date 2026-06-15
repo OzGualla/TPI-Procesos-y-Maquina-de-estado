@@ -81,11 +81,15 @@ Pedido derivado a producción -> Finaliza
 -Todo pedido se registra con estado "pendiente".
 -El pedido solo avanza a producción si Ventas lo autoriza explícitamente.
 
+
 ## Integrantes
+```text
 Gualla Mariano
 Furfaro Ivan
 
+## Entidad
 Carrera: Tecnicatura de programacion a distancia
 Cátedra: Organización Empresarial — UTN  
 Docente titular: Prof. Gabriela Martínez
 Docentes adjuntos: Prof. Carolina Bruno, Prof. Mario Raúl López, Prof. Andrea Ramos
+```
