@@ -1,0 +1,7 @@
+id_pedido,producto,cantidad,presupuesto,estado
+1,spot,20,34000,pendiente
+2,farol,10,46750.0,pendiente
+3,velador,15,49725.0,pendiente
+4,portalampara,30,33150.0,pendiente
+5,colgante,200,800000,pendiente
+6,lampara,15,28687.5,pendiente

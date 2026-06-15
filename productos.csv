@@ -1,0 +1,16 @@
+producto,precio,stock,descuento
+farol,5500,30,si
+lampara,2250,50,si
+aplique,3200,300,no
+cable,1500,0,si
+resorte,200,1500,si
+colgante,4000,200,no
+cruzeta,200,1200,no
+velas,150,0,si
+caño,3600,0,no
+plafon,2300,50,no
+lapicero,3200,20,no
+pinza,6500,40,no
+portalampara,1300,200,si
+velador,3900,20,si
+spot,1700,200,no
