@@ -9,24 +9,22 @@ El bot permite al cliente consultar productos, obtener un presupuesto en tiempo 
 ## Estructura del proyecto
 
 TPI-Procesos-y-Maquina-de-estado/
-|
-|__ solicitar_presupuesto.py     # Script principal del chatbot
-|__ productos.csv                # Base de datos del catálogo de productos
-|__ pedidos_registrados.csv      # Registro de pedidos generados
-|__ README.md
-|__ .gitignore
-|
-|__ docs/
-|   |__ TPI_Informe_Empresa_Ferrolux.pdf
-|   |__ FerroLux_Diccionario_de_Datos.docx
-|   |__ FerroLux_Manual_de_Usuario.docx
-|   |__ Maquina_de_estado.docx
-|   |__ Consultas_IA.pdf
-|   |__ as-is.bpmn		 # Diagrama BPMN del proceso AS-IS
-|   |__ to-be.bpmn     # Diagrama BPMN del proceso TO-BE
-|
-|__ README.md
-
+│
+├── solicitar_presupuesto.py     # Script principal del chatbot
+├── productos.csv                # Base de datos del catálogo de productos
+├── pedidos_registrados.csv      # Registro de pedidos generados (se crea automáticamente)
+│
+├── docs/
+│   ├── TPI_Informe_Empresa_Ferrolux.pdf
+│   ├── FerroLux_Diccionario_de_Datos.docx
+│   ├── FerroLux_Manual_de_Usuario.docx
+│   ├── Maquina_de_estado.docx
+│	├── Consultas_IA.pdf
+│	├── as-is.bpmn		 # Diagrama BPMN del proceso AS-IS
+│   └── to-be.bpmn       # Diagrama BPMN del proceso TO-BE
+│
+├── README.md
+└── .gitignore
 
 ## Requisitos
 Python 3.10 o superior (se utiliza "match/case" , disponible desde 3.10)
@@ -46,31 +44,30 @@ python solicitar_presupuesto.py
 ## Flujo del chatbot
 
 Cliente selecciona producto
-|
+        ↓
 Sistema verifica stock
-|
-¿Hay stock?
-/          \
-Sí            No → Ofrece reiniciar proceso o finalizar proceso
-|
+        ↓
+    ¿Hay stock?
+   /           \
+  Sí            No → Ofrece reiniciar o finalizar
+   ↓
 Sistema calcula presupuesto (con descuento si aplica)
-|
+        ↓
 ¿Cliente confirma el pedido?
-/           \
-Sí            No → Finaliza proceso
-|
+   /           \
+  Sí            No → Finaliza
+   ↓
 Pedido registrado en CSV con estado "pendiente"
-|
+        ↓
 Ventas revisa y autoriza/rechaza
-|
-¿Autorizado?
-/           \
-Sí            No → Da aviso al usuario y finaliza proceso
-|
+        ↓
+    ¿Autorizado?
+   /           \
+  Sí            No → Finaliza
+   ↓
 Se genera orden de preparación
-|
-Pedido derivado a producción -> Finaliza proceso
-
+        ↓
+Pedido derivado a producción → Finaliza
 
 ## Reglas de negocio
 -Se aplica un descuento del 15% cuando el producto tiene 'descuento = "si"'.
