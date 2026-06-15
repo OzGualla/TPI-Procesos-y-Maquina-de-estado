@@ -8,23 +8,25 @@ El bot permite al cliente consultar productos, obtener un presupuesto en tiempo 
 
 ## Estructura del proyecto
 
+```text
 TPI-Procesos-y-Maquina-de-estado/
 │
-├── solicitar_presupuesto.py     # Script principal del chatbot
-├── productos.csv                # Base de datos del catálogo de productos
-├── pedidos_registrados.csv      # Registro de pedidos generados (se crea automáticamente)
+├── solicitar_presupuesto.py      # Script principal del chatbot
+├── productos.csv                 # Base de datos del catálogo de productos
+├── pedidos_registrados.csv       # Registro de pedidos generados (se crea automáticamente)
 │
 ├── docs/
 │   ├── TPI_Informe_Empresa_Ferrolux.pdf
 │   ├── FerroLux_Diccionario_de_Datos.docx
 │   ├── FerroLux_Manual_de_Usuario.docx
 │   ├── Maquina_de_estado.docx
-│	├── Consultas_IA.pdf
-│	├── as-is.bpmn		 # Diagrama BPMN del proceso AS-IS
-│   └── to-be.bpmn       # Diagrama BPMN del proceso TO-BE
+│   ├── Consultas_IA.pdf
+│   ├── as-is.bpmn                # Diagrama BPMN del proceso AS-IS
+│   └── to-be.bpmn                # Diagrama BPMN del proceso TO-BE
 │
 ├── README.md
 └── .gitignore
+```
 
 ## Requisitos
 Python 3.10 o superior (se utiliza "match/case" , disponible desde 3.10)
@@ -43,31 +45,33 @@ python solicitar_presupuesto.py
 
 ## Flujo del chatbot
 
+```text
 Cliente selecciona producto
-        ↓
+        |
 Sistema verifica stock
-        ↓
+        |
     ¿Hay stock?
    /           \
-  Sí            No → Ofrece reiniciar o finalizar
-   ↓
+  Sí            No -> Ofrece reiniciar o finalizar
+   |
 Sistema calcula presupuesto (con descuento si aplica)
-        ↓
+        |
 ¿Cliente confirma el pedido?
    /           \
-  Sí            No → Finaliza
-   ↓
+  Sí            No -> Finaliza
+   |
 Pedido registrado en CSV con estado "pendiente"
-        ↓
+        |
 Ventas revisa y autoriza/rechaza
-        ↓
+        |
     ¿Autorizado?
    /           \
-  Sí            No → Finaliza
-   ↓
+  Sí            No -> Finaliza
+   |
 Se genera orden de preparación
-        ↓
-Pedido derivado a producción → Finaliza
+        |
+Pedido derivado a producción -> Finaliza
+```
 
 ## Reglas de negocio
 -Se aplica un descuento del 15% cuando el producto tiene 'descuento = "si"'.
@@ -81,6 +85,7 @@ Pedido derivado a producción → Finaliza
 Gualla Mariano
 Furfaro Ivan
 
+Carrera: Tecnicatura de programacion a distancia
 Cátedra: Organización Empresarial — UTN  
 Docente titular: Prof. Gabriela Martínez
 Docentes adjuntos: Prof. Carolina Bruno, Prof. Mario Raúl López, Prof. Andrea Ramos
